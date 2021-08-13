@@ -1,0 +1,233 @@
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow',sans-serif;
+}
+
+.mainContainer {
+    position: relative;
+}
+
+.background {
+    background-color: hsl(207, 33%, 95%);
+    width : 150px;
+    height : 420px;
+    position: absolute;
+    right : 0;
+    z-index: -1;
+    border-radius: 0 0 0  40px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 30px;
+}
+
+.headerContainer > button {
+    border: none;
+    cursor: pointer;
+}
+
+.menuMobile {
+    display: none;
+    position: absolute;
+    left : 1.7em;
+    background-color: #fff;
+    padding : 20px;
+    border-radius: 5px;
+    width : 300px;
+    animation: fadein 0.3s ease-in-out;
+    box-shadow: -5px 4px 12px 0px rgba(0,0,0,0.75);
+}
+
+@keyframes fadein {
+    from { opacity: 0;}
+    to { opacity:  1;}
+}
+
+ul > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+ul > li > a {
+    font-family: 'Barlow Condensed',sans-serif;
+    color: hsl(230, 29%, 20%);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+ul > li > a:hover {
+    border-bottom: 1px solid hsl(230, 29%, 20%);
+}
+
+.desktopNav {
+    display: none;
+}
+
+.line {
+    opacity: 0.3;
+}
+
+.login {
+    margin-top : 10px;
+    color : hsl(231, 7%, 65%);
+}
+
+.active {
+    display : block
+}
+
+.imageContainer {
+    margin-block: 20px 100px;
+    min-width : 500px;
+    margin-left: 5px;
+}
+
+.imageContainer > img {
+    max-width : 100%;
+    height: auto;
+}
+
+.hero {
+    margin-inline : 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.new {
+    background-color: hsl(230, 29%, 20%);
+    padding : 5px 10px;
+    border-radius: 40px;
+    color : #fff;
+    font-weight: 700;
+}
+
+.desc {
+    font-family: 'Barlow Condensed',sans-serif;
+    letter-spacing: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color : hsl(231, 7%, 65%);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-family: 'Barlow Condensed';
+    color : hsl(230, 29%, 20%);
+}
+
+.hero > p {
+    margin-top: 20px;
+    color : hsl(231, 7%, 65%);
+    font-size: 18px;
+}
+
+.buttonContainer {
+    margin-block: 20px 80px;
+    display: flex;
+    gap : 20px;
+    align-items: center;
+}
+
+.buttonContainer > button {
+    background-color: hsl(0, 100%, 68%);
+    padding : 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color : #fff;
+    font-weight: 700;
+    font-family: 'Barlow Condensed',sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: 0.5s ease-in-out;
+}
+
+.buttonContainer > button:hover {
+    background-color: hsl(0, 100%, 68%);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color : hsl(230, 11%, 40%);
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+@media screen and (min-width : 1200px) {
+    .background {
+        background-color: hsl(207, 33%, 95%);
+        width : 700px;
+        height : 420px;
+        position: absolute;
+        right : 0;
+        z-index: -1;
+        border-radius: 0 0 0  40px;
+    }
+
+    .headerContainer > button > img{
+        display: none;
+    }
+
+    .desktopNav {
+        display: block;
+    }
+
+    .desktopNav > ul {
+        display: flex ;
+        justify-content: flex-end;
+        gap : 40px;
+        margin-right : 8em
+
+    }
+
+    .desktopNav > ul > li {
+        margin-bottom : 0;
+        font-weight: 700;
+        font-family: 'Barlow Condensed',sans-serif;
+        font-size: 16px;
+        color: hsl(230, 29%, 20%);
+    }
+
+    .desktopNav > ul > li:hover {
+        border-bottom: 1px solid hsl(230, 29%, 20%);
+    }
+
+    .desktopNav > ul > li:last-child {
+        color: hsl(231, 7%, 65%);
+        position: relative;
+        left : 2em;
+    }
+
+    .mainSection {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .imageContainer > img {
+        max-width : unset;
+        height: auto;
+    }
+}
